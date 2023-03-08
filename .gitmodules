@@ -1,0 +1,3 @@
+[submodule "Personal_management/Personal_management/client"]
+	path = Personal_management/Personal_management/client
+	url = https://github.com/tule24/graphQL-learn.git
