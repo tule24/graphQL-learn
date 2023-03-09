@@ -15,7 +15,7 @@ export const typeDefs = `#graphql
         passwordResetExpires: String
         createdAt: String
         updatedAt: String
-        # orders: [Order]
+        orders: [Order]
     }
 
     type Auth {
@@ -41,20 +41,20 @@ export const typeDefs = `#graphql
         products: [Product]
     }
 
-    # type ProductPerOrder {
-    #     product: Product
-    #     quantity: Int
-    # }
+    type ProductPerOrder {
+        productId: ID!
+        quantity: Int
+    }
 
-    # type Order {
-    #     id: ID
-    #     products: [ProductPerOrder]
-    #     total: Float
-    #     status: String
-    #     buyer: User
-    #     createdAt: String
-    #     updatedAt: String
-    # }
+    type Order {
+        id: ID
+        products: [ProductPerOrder]
+        total: Float
+        status: String
+        buyer: User
+        createdAt: String
+        updatedAt: String
+    }
 
     type Query {
         products (filter: String, sort: String, page: String, limit: String): [Product]
@@ -63,8 +63,8 @@ export const typeDefs = `#graphql
         user (id: ID!): User
         categories: [Category]
         category (id: ID!): Category
-        # orders (productId: ID, userId: ID): [Order]
-        # order (id: ID!): Order
+        orders (productId: ID, userId: ID): [Order]
+        order (id: ID!): Order
     }
 
     # TYPE MUTAION
@@ -82,11 +82,11 @@ export const typeDefs = `#graphql
         password: String!
     }
 
-    # input OrderInput {
-    #     products: ArrayProducts!
-    #     total: Float!
-    #     buyerId: ID!
-    # }
+    input OrderInput {
+        products: [ProductPerOrder]!
+        total: Float!
+        buyerId: ID!
+    }
 
     type Mutation {
         register (registerInput: RegisterInput!): User
@@ -97,7 +97,7 @@ export const typeDefs = `#graphql
         addCategory (name: String!, description: String!, creatorId: ID!): Category
         updateCategory (name: String, description: String): Category
         deleteCategory (categoryId: ID!): Category
-        # addOrder (orderInput: OrderInput!): Order
-        # updateOrder (orderId: ID!, status: String!): Order
+        addOrder (orderInput: OrderInput!): Order
+        updateOrder (orderId: ID!, status: String!): Order
     }
 `
