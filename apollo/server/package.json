@@ -16,6 +16,7 @@
     "nodemon": "^2.0.21"
   },
   "dependencies": {
+    "@apollo/datasource-rest": "^5.0.2",
     "@apollo/server": "^4.4.1",
     "graphql": "^16.6.0"
   }

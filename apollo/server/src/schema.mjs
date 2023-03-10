@@ -1,6 +1,7 @@
 export const typeDefs = `#graphql
     type Query {
         tracksForHome: [Track!]!
+        tracksForHomeFetch: [Track!]!
     }
 
     type Track {

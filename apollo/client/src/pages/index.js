@@ -1,3 +1,4 @@
 import Home from "./Home"
-import NotFound from "./NotFound"
-export { Home, NotFound }
+import ErrorPage from "./ErrorPage"
+import Detail from "./Detail"
+export { Home, ErrorPage, Detail }
