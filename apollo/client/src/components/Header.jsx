@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/space_cat_logo.png'
 const Header = () => {
     return (
-        <header className="p-4 bg-gray-900 text-white shadow-lg">
+        <header className="py-4 px-10 bg-gray-900 text-white shadow-lg">
             <div className="container flex justify-between h-16 mx-auto">
                 <Link to='/' aria-label="Back to homepage" className="flex items-center p-2">
                     <img src={logo} />

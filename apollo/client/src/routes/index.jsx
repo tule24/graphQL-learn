@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Home, ErrorPage, Detail } from '../pages'
+import { Home, ErrorPage, Detail, Module } from '../pages'
 import HomeLayout from '../layouts/HomeLayout'
 export default createBrowserRouter([
     {
@@ -14,6 +14,11 @@ export default createBrowserRouter([
             {
                 path: 'trackDetail/:trackId',
                 element: <Detail />
+            },
+            {
+
+                path: 'trackDetail/:trackId/modules',
+                element: <Module />
             }
         ]
     }

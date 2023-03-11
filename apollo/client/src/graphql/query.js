@@ -40,3 +40,39 @@ export const TRACK = gql`
         }
     }
 `
+
+export const MODULES_OF_TRACK = gql`
+    query getModulesOfTrack($trackId: ID!) {
+    track(id: $trackId) {
+      id
+      title
+      modules {
+        id
+        title
+        length
+        content
+        videoUrl
+      }
+    }
+  }
+`
+
+export const MODULE_AND_PARENT_TRACK = gql`
+    query getModuleAndParentTrack($moduleId: ID!, $trackId: ID!) {
+    module(id: $moduleId) {
+      id
+      title
+      content
+      videoUrl
+    }
+    track(id: $trackId) {
+      id
+      title
+      modules {
+        id
+        title
+        length
+      }
+    }
+  }
+`

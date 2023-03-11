@@ -12,10 +12,18 @@ export class TrackAPI extends RESTDataSource {
     }
 
     async getTrack(trackId) {
-        return this.get(`track/${trackId}`)
+        return this.get(`track/${encodeURIComponent(trackId)}`)
     }
 
     async getTrackModules(trackId) {
-        return this.get(`track/${trackId}/modules`)
+        return this.get(`track/${encodeURIComponent(trackId)}/modules`)
+    }
+
+    async incrementTrackViews(trackId) {
+        return this.patch(`track/${encodeURIComponent(trackId)}/numberOfViews`)
+    }
+
+    async getModule(moduleId) {
+        return this.get(`module/${encodeURIComponent(moduleId)}`)
     }
 }
