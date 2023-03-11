@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <QueryResult loading={loading} error={error} data={data}>
             <div className='container mx-auto grid grid-cols-3 gap-5'>
-                {data?.tracksForHome?.map((track, i) => <Link to={`trackDetail/${track.id}`}><TrackCard track={track} key={i} /></Link>)}
+                {data?.tracksForHome?.map((track, i) => <Link to={`trackDetail/${track.id}`} key={i}><TrackCard track={track} /></Link>)}
             </div>
         </QueryResult>
     )

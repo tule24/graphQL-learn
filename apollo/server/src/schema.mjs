@@ -1,7 +1,8 @@
 export const typeDefs = `#graphql
     type Query {
         tracksForHome: [Track!]!
-        tracksForHomeFetch: [Track!]!
+        track (id: ID!): Track
+        # tracksForHomeFetch: [Track!]!
     }
 
     type Track {
@@ -11,6 +12,15 @@ export const typeDefs = `#graphql
         thumbnail: String!
         length: Int!
         modulesCount: Int!
+        description: String!
+        numberOfViews: Int!
+        modules: [Module!]!
+    }
+
+    type Module {
+        id: ID!
+        title: String!
+        length: Int!
     }
 
     type Author {

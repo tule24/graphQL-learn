@@ -6,14 +6,14 @@ const TrackCard = ({ track }) => {
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
             <div className="flex space-x-4">
-                <img alt src={author.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
+                <img alt="photo" src={author.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                 <div className="flex flex-col space-y-1">
-                    <a rel="noopener noreferrer" href="#" className="text-sm font-semibold">{author.name}</a>
+                    <span className="text-sm font-semibold">{author.name}</span>
                     <span className="text-xs dark:text-gray-400">{formatTime(length)}</span>
                 </div>
             </div>
             <div>
-                <img src={thumbnail} alt className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
+                <img src={thumbnail} alt="photo" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
                 <h2 className="mb-1 text-xl font-semibold">{title}</h2>
             </div>
             <div className="flex flex-wrap justify-between">

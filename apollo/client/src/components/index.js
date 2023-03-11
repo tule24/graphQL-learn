@@ -4,4 +4,5 @@ import Footer from "./Footer"
 import ErrorDisplay from './ErrorDisplay'
 import LoadingSpiner from "./LoadingSpiner"
 import QueryResult from "./QueryResult"
-export { TrackCard, ErrorDisplay, LoadingSpiner, Header, Footer, QueryResult }
+import DetailComps from "./DetailComps"
+export { TrackCard, ErrorDisplay, LoadingSpiner, Header, Footer, QueryResult, DetailComps }

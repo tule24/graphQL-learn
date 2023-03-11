@@ -7,7 +7,7 @@ const Header = () => {
             <div className="container flex justify-between h-16 mx-auto">
                 <Link to='/' aria-label="Back to homepage" className="flex items-center p-2">
                     <img src={logo} />
-                    <div className='ml-5 font-semibold'>
+                    <div className='ml-5 font-semibold text-pink-500'>
                         <p>Catstronaut</p>
                         <p>Kitty space academy</p>
                     </div>

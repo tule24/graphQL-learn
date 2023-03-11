@@ -12,7 +12,7 @@ export default createBrowserRouter([
                 element: <Home />
             },
             {
-                path: 'trackDetail/:id',
+                path: 'trackDetail/:trackId',
                 element: <Detail />
             }
         ]

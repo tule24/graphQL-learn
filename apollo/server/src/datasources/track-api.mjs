@@ -10,4 +10,12 @@ export class TrackAPI extends RESTDataSource {
     async getAuthor(authorId) {
         return this.get(`author/${encodeURIComponent(authorId)}`)
     }
+
+    async getTrack(trackId) {
+        return this.get(`track/${trackId}`)
+    }
+
+    async getTrackModules(trackId) {
+        return this.get(`track/${trackId}/modules`)
+    }
 }
