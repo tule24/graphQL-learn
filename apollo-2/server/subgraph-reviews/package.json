@@ -1,20 +1,23 @@
 {
-  "name": "subgraph-reviews",
+  "name": "reviews",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --experimental-json-modules src/index.mjs"
+    "dev": "nodemon index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@apollo/server": "^4.5.0",
-    "graphql": "^16.6.0",
-    "graphql-tag": "^2.12.6"
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=14.0.0 <=18"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.21"
+  "dependencies": {
+    "@apollo/server": "^4.0.0",
+    "@apollo/subgraph": "^2.3.4",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "nodemon": "^2.0.13"
   }
 }
